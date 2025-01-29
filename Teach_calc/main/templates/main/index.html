@@ -1,13 +1,11 @@
+{% extends "main/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-</head>
+
+{% block title %}
+  <title>Главная страница</title>
+{% endblock title %}
+  
 <body>
     <header>
         <nav>
@@ -17,24 +15,22 @@
             <a href="login.html">Вход</a>
         </nav>
     </header>
-
-    <main>
-        <h1>Добро пожаловать на главную страницу!</h1>
-        
-        <div class="container">
-            <img src="{% static 'img/turt.jpeg' %}" alt="Левое изображение" class="image">
-            <div>
-                <p>Это мой первый веб сайт на фремворке Django. До этого я писал код на чистом html. 
-                  Приложение представляет из себя базу для упрощения работы репетиторов 
-                  и подсчета заработка и часов, а также расписание и часы работы
-                </p>
-            </div>
+{% block content %}
+  <main>
+    <h1>Добро пожаловать на главную страницу!</h1>
+    
+    <div class="container">
+        <img src="{% static 'img/turt.jpeg' %}" alt="Тестовое изображение" class="image">
+        <div>
+            <p>Это мой первый веб сайт на фремворке Django. До этого я писал код на чистом html. 
+              Приложение представляет из себя базу для упрощения работы репетиторов 
+              и подсчета заработка и часов, а также расписание и часы работы
+            </p>
         </div>
-    </main>
+    </div>
+  </main>
+{% endblock content %}
+    
 
-    <footer>
-        <p>&copy; 2025</p>
-        <p>Автор: SyndromeMX</p>
-    </footer>
 </body>
 </html>
