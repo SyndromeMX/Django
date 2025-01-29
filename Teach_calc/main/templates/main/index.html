@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
-    <link rel="stylesheet" href= "{% static "css/styles.css" %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
 </head>
 <body>
-    <!-- Шапка с кнопками -->
     <header>
         <nav>
             <a href="about.html">О нас</a>
@@ -18,13 +18,20 @@
         </nav>
     </header>
 
-    <!-- Основное содержимое -->
     <main>
         <h1>Добро пожаловать на главную страницу!</h1>
-        <p>Здесь вы найдете много интересного и полезного.</p>
+        
+        <div class="container">
+            <img src="{% static 'img/turt.jpeg' %}" alt="Левое изображение" class="image">
+            <div>
+                <p>Это мой первый веб сайт на фремворке Django. До этого я писал код на чистом html. 
+                  Приложение представляет из себя базу для упрощения работы репетиторов 
+                  и подсчета заработка и часов, а также расписание и часы работы
+                </p>
+            </div>
+        </div>
     </main>
 
-    <!-- Подвал -->
     <footer>
         <p>&copy; 2025</p>
         <p>Автор: SyndromeMX</p>
