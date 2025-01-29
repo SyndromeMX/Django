@@ -10,11 +10,3 @@ def index(request):
     }
     return render(request,"main/index.html", context)
 
-def about(request):
-    return HttpResponse("About")
-
-def register(request):
-    return HttpResponse("reg")
-
-def login(request):
-    return HttpResponse("log")
