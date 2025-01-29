@@ -6,15 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    {% block title %}
-    {% endblock title %}
+    <title>{{title}}</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="about.html">О нас</a>
-            <a href="blog.html">Блог</a>
+            <a href="{% url "index" %}">Главная</a>
+            <a href="{% url "about" %}">О нас</a>
+            <a href="url">Блог</a>
             <a href="topic.html">Топик</a>
             <a href="login.html">Вход</a>
         </nav>
