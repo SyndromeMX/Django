@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+
+  
+<body>
+    
+{% block content %}
+  <main>
+    <h1>Добро пожаловать на главную страницу!</h1>
+    
+    <div class="container">
+        <img src="{% static 'img/turt.jpeg' %}" alt="Тестовое изображение" class="image">
+        <div>
+            <p>{{content}}}
+            </p>
+        </div>
+    </div>
+  </main>
+{% endblock content %}
+    
+
+</body>
+</html>
