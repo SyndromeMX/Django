@@ -6,19 +6,21 @@
 {% block content %}
     <main>
         <div class="register-container">
-            <form class="register-form">
+            <form class="register-form" method="POST">
+                {% csrf_token %}
                 <h2>Регистрация</h2>
-                <input type="email" placeholder="Email" required>
-                <input type="text" placeholder="Имя" required>
-                <input type="text" placeholder="Фамилия" required>
-                <input type="text" placeholder="Никнейм" required>
-                <input type="password" placeholder="Пароль" required>
-                <input type="password" placeholder="Подтверждение пароля" required>
-                <button type="submit">Зарегистрироваться</button>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="first_name" placeholder="Имя" required>
+                <input type="text" name="last_name" placeholder="Фамилия" required>
+                <input type="text" name="username" placeholder="Никнейм" required>
+                <input type="password" name="password" placeholder="Пароль" required>
+                <input type="password" name="password_confirm" placeholder="Подтверждение пароля" required>
+                <button type="submit" href="{% url "login:login" %}">Зарегистрироваться</button>
                 <div class="register-links">
                     <a href="{% url "login:login" %}">Уже есть аккаунт? Войдите</a>
                 </div>
             </form>
+            
         </div>
     </main>
 {% endblock content %}
